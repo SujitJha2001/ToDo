@@ -24,6 +24,13 @@ window.addEventListener('load', () => {
 
 		task_content_el.appendChild(task_input_el);
 
+		task_input_el.addEventListener('click',function(){
+			task_input_el.style.textDecoration = "line-through";
+		})
+		task_input_el.addEventListener('dblclick',function(){
+			task_input_el.style.textDecoration = "none";
+		})
+
 		const task_actions_el = document.createElement('div');
 		task_actions_el.classList.add('actions');
 		
